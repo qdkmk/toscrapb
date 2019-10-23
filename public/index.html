@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./css.css">
+  <script  type="module" src="./js/main.js"></script>
+  <title>toscrapb</title>
+</head>
+
+<body>
+<input id="drawer-checkbox" type="checkbox">
+<label id="drawer-icon" for="drawer-checkbox"><span></span></label>
+<label id="drawer-close" for="drawer-checkbox"></label>
+<div id="menu-modal-content">
+  <button id="add-link-list" class="form-button">自動リンク置換用の単語を登録</button>
+
+  <div id="add-link-word-modal-content" class="align-center">
+    <p class="form-label">自動でリンクに置換したい単語を改行区切りで入力してください</p>
+  <textarea id="link-word-list" class="form-textarea">
+  はじめて
+  ハロー
+  問題</textarea>
+  </div>
+  <button id="make-link" class="form-button">登録単語をリンクに置換</button>
+</div>
+<img src="./images/loading.gif" id = "loading">
+
+<div class="video">
+  <video id="player" muted autoplay></video>
+</div>
+<div id="barcode-text">
+  Barcode text : <span id="rawValue"></span>
+</div>
+  <div class="button">
+    <button id="start">バーコードから書籍情報を取得</button>
+  </div>
+  <div>
+    <p class="title"></p>
+    <p class="author"></p>
+    <p class="pubdate"></p>
+    <p class="description"></p>
+  </div>
+  <div class="form-block">
+    <label class="flex-column">
+      <span class="form-label">プロジェクトID:</span>
+      <input class="form-input" id="js-shared-projectId">
+    </label>
+  </div>
+
+  <div class="form-block">
+    <label class="flex-column">
+      <span class="form-label">ページ名:</span>
+      <input class="form-input --title" id="js-shared-title">
+    </label>
+  </div>
+
+  <div class="form-block">
+    <button class="form-button" id="js-create-button">scrapboxへ送信</button>
+  </div>
+
+  <div class="form-block">
+    <label class="flex-column">
+      <span class="form-label">本文:</span>
+      <textarea class="form-textarea" id="js-shared-text"></textarea>
+    </label>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

@@ -12,24 +12,24 @@ class GetApi {
           reject("Google Booksに登録されていないISBNです");
         } else {
           let item = response.data.items[0].volumeInfo;
-          text = "[***** [" + item.title + "]]\n[* 著者:[" + item.authors + "]]";
+          text = "[***** [" + item.title + "]]\n[* 著者:[" + item.authors + "]]\n";
 
           //発行日有無
           if (this.consistData(item.publishedDate)) {
-            text += "\n発行日:" + item.publishedDate;
+            text += "発行日:" + item.publishedDate + "\n";
           }
 
           //ISBN13有無
           if (this.consistData(item.industryIdentifiers[1].identifier)) {
-            text += "\nISBN:" + item.industryIdentifiers[1].identifier;
+            text += "ISBN:" + item.industryIdentifiers[1].identifier + "\n";
           }
           //description有無
           if (this.consistData(item.description)) {
-            text += "\n説明:" + item.description;
+            text += "説明:" + item.description + "\n";
           }
           //thumbnail有無
           if (this.consistData(item.imageLinks)　&& this.consistData(item.imageLinks.thumbnail)) {
-              text += "\n[" + item.imageLinks.thumbnail + ".png]";
+              text += "[" + item.imageLinks.thumbnail + ".png]\n";
           }
         }
         resolve(text);

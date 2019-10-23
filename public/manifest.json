@@ -1,0 +1,27 @@
+{
+  "name": "toscrapb",
+  "short_name": "toSB",
+  "theme_color": "#009e73",
+  "icons": [{
+    "src": "images/ico/ico192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+      "src": "images/ico/ico512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+    "share_target":
+  {
+    "action": "/share",
+    "params":
+    {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000"
+  }
